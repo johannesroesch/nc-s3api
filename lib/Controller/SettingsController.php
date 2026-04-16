@@ -69,6 +69,7 @@ class SettingsController extends Controller {
 		$credential->setAccessKey($accessKey);
 		$credential->setSecretKey($secretKey);
 		$credential->setLabel($label);
+		$credential->setCreatedAt(time());
 		$this->credentialMapper->insert($credential);
 
 		return new JSONResponse($this->toPublic($credential), Http::STATUS_CREATED);
@@ -112,6 +113,7 @@ class SettingsController extends Controller {
 		$credential->setAccessKey($accessKey);
 		$credential->setSecretKey($secretKey);
 		$credential->setLabel($label);
+		$credential->setCreatedAt(time());
 		$this->credentialMapper->insert($credential);
 
 		// Return secretKey once — caller must save it

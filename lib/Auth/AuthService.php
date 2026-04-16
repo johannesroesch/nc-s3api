@@ -32,7 +32,7 @@ use OCP\IUserManager;
  *              by (nc_user_id = accessKey). User must have created an S3 secret via
  *              the personal settings UI.
  */
-final class AuthService {
+class AuthService {
 	public function __construct(
 		private readonly SigV4Validator $validator,
 		private readonly IUserManager $userManager,

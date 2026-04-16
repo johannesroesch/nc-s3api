@@ -25,6 +25,7 @@ use OCA\NcS3Api\S3\S3Request;
 use OCA\NcS3Api\S3\S3Response;
 use OCA\NcS3Api\Xml\XmlWriter;
 use OCP\Files\NotPermittedException;
+use Psr\Log\LoggerInterface;
 
 /**
  * Central dispatcher: resolves the S3 operation and delegates to the
@@ -44,6 +45,7 @@ class S3Dispatcher {
 		private readonly CorsHandler $corsHandler,
 		private readonly EncryptionHandler $encryptionHandler,
 		private readonly XmlWriter $xmlWriter,
+		private readonly LoggerInterface $logger,
 	) {
 	}
 
@@ -57,7 +59,7 @@ class S3Dispatcher {
 			return $this->errorResponse(S3ErrorCodes::ACCESS_DENIED, 'Access Denied', '', 403);
 		} catch (\Throwable $e) {
 			// Log unexpected errors but don't leak details to the client
-			\OC::$server->get(\Psr\Log\LoggerInterface::class)->error(
+			$this->logger->error(
 				'nc_s3api: Unhandled exception: ' . $e->getMessage(),
 				['exception' => $e, 'app' => 'nc_s3api'],
 			);

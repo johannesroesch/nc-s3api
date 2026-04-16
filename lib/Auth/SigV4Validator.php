@@ -41,7 +41,7 @@ use OCA\NcS3Api\S3\S3Request;
  *
  * 5. Compare with provided signature (timing-safe).
  */
-final class SigV4Validator {
+class SigV4Validator {
 	/**
 	 * Verify the signature for a standard (Authorization-header) request.
 	 *

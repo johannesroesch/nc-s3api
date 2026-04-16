@@ -21,7 +21,7 @@ use OCA\NcS3Api\S3\S3Request;
  * Operation names are string constants defined below and used as keys in
  * S3Dispatcher's handler map.
  */
-final class OperationResolver {
+class OperationResolver {
 	// -------------------------------------------------------------------------
 	// Operation name constants
 	// -------------------------------------------------------------------------
