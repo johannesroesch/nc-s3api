@@ -1,0 +1,25 @@
+{ "translations": {
+    "S3 API Gateway": "S3 API Gateway",
+    "S3-compatible API gateway for Nextcloud": "S3-compatible API gateway for Nextcloud",
+    "S3 API Gateway — Admin Credentials": "S3 API Gateway — Admin Credentials",
+    "Create key-pairs that map an Access Key / Secret Key to a Nextcloud user (Mode B).": "Create key-pairs that map an Access Key / Secret Key to a Nextcloud user (Mode B).",
+    "Label": "Label",
+    "Nextcloud User": "Nextcloud User",
+    "Access Key": "Access Key",
+    "Add key-pair": "Add key-pair",
+    "Nextcloud Username": "Nextcloud Username",
+    "Access Key (leave blank to auto-generate)": "Access Key (leave blank to auto-generate)",
+    "Secret Key": "Secret Key",
+    "Label (optional)": "Label (optional)",
+    "Add": "Add",
+    "Delete": "Delete",
+    "Create a dedicated S3 Access Key / Secret Key pair for your account (Mode A). The secret is shown only once — save it immediately.": "Create a dedicated S3 Access Key / Secret Key pair for your account (Mode A). The secret is shown only once — save it immediately.",
+    "Endpoint URL:": "Endpoint URL:",
+    "Secret Key (you choose, min 16 chars)": "Secret Key (you choose, min 16 chars)",
+    "My local backup": "My local backup",
+    "New key-pair created — save the Access Key and Secret Key now, the secret will not be shown again.": "New key-pair created — save the Access Key and Secret Key now, the secret will not be shown again.",
+    "Access Key:": "Access Key:",
+    "Secret Key:": "Secret Key:"
+},
+"pluralForm": "nplurals=2; plural=(n != 1);"
+}
