@@ -278,7 +278,7 @@ class MultipartHandler {
 			'size' => $p->getSize(),
 		], $parts);
 
-		$nextMarker = $isTruncated && !empty($parts) ? end($parts)['part_number'] : null;
+		$nextMarker = $isTruncated && !empty($list) ? end($list)['part_number'] : null;
 		$xml = $this->xmlWriter->listParts($bucket, $key, $uploadId, $list, $isTruncated, $nextMarker);
 		return S3Response::ok($xml);
 	}

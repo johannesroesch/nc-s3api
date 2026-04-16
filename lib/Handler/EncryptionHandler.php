@@ -71,7 +71,7 @@ class EncryptionHandler {
 		$auth->requireAuthenticated();
 		$bucket = $request->bucket ?? '';
 		$this->bucketService->headBucket($auth->userId, $bucket);
-		$this->metaMapper->delete($auth->userId, $bucket, self::META_KEY);
+		$this->metaMapper->deleteByKey($auth->userId, $bucket, self::META_KEY);
 		return S3Response::noContent();
 	}
 }

@@ -17,7 +17,7 @@ namespace OCA\NcS3Api\Storage;
  *   S3 Key      → /s3/<bucket>/<key>        (slashes preserved)
  *   Multipart   → /s3/.uploads/<uploadId>/part-<n>
  */
-final class StorageMapper {
+class StorageMapper {
 	public const BASE_DIR = 's3';
 	public const UPLOADS_DIR = 's3/.uploads';
 

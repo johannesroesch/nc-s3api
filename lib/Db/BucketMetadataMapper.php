@@ -49,7 +49,7 @@ class BucketMetadataMapper extends QBMapper {
 		}
 	}
 
-	public function delete(string $userId, string $bucket, string $metaKey): void {
+	public function deleteByKey(string $userId, string $bucket, string $metaKey): void {
 		$qb = $this->db->getQueryBuilder();
 		$qb->delete($this->getTableName())
 			->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)))

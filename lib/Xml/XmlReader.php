@@ -22,7 +22,7 @@ use OCA\NcS3Api\S3\S3ErrorCodes;
  * - PutBucketVersioning
  * - DeleteObjects
  */
-final class XmlReader {
+class XmlReader {
 	/**
 	 * Parse the CompleteMultipartUpload request body.
 	 *
