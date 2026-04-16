@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Bucket outline -->
+  <rect x="6" y="12" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+  <!-- Bucket top ellipse -->
+  <ellipse cx="16" cy="12" rx="10" ry="3" stroke="currentColor" stroke-width="2"/>
+  <!-- S3 label -->
+  <text x="16" y="22" text-anchor="middle" font-family="sans-serif" font-size="8"
+        font-weight="bold" fill="currentColor">S3</text>
+  <!-- Up-arrow (upload) -->
+  <line x1="16" y1="8" x2="16" y2="2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="12,5 16,1 20,5" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

@@ -1,0 +1,26 @@
+{
+    "timeout": 10,
+    "source": {
+        "directories": ["lib"],
+        "excludes": [
+            "AppInfo",
+            "Controller",
+            "Db",
+            "Dispatcher/S3Dispatcher.php",
+            "Handler",
+            "Settings",
+            "Storage",
+            "Auth/AuthService.php",
+            "Auth/AuthContext.php",
+            "Auth/PresignedUrlValidator.php"
+        ]
+    },
+    "logs": {
+        "text": "infection.log"
+    },
+    "phpUnit": {
+        "configDir": "."
+    },
+    "minMsi": 60,
+    "minCoveredMsi": 70
+}

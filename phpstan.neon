@@ -1,0 +1,25 @@
+parameters:
+    level: 5
+    paths:
+        - lib
+    excludePaths:
+        - vendor
+        - tests
+        # Framework-intensive Klassen benötigen OCP-Stubs — werden separat über IDE analysiert
+        - lib/AppInfo
+        - lib/Controller
+        - lib/Db
+        - lib/Dispatcher/S3Dispatcher.php
+        - lib/Handler
+        - lib/Settings
+        - lib/Storage
+        - lib/Auth/AuthService.php
+        - lib/Auth/AuthContext.php
+        - lib/Auth/PresignedUrlValidator.php
+    ignoreErrors:
+        # PHPStan infers $result as non-falsy-string due to implode() — the '' check is correct
+        - message: '#Strict comparison using !== between non-falsy-string and .* will always evaluate to true#'
+          path: lib/Auth/SigV4Validator.php
+        # storage_class has a default in the array shape but ?? 'STANDARD' is intentional defence
+        - message: '#Offset .storage_class. on array.* on left side of \?\? always exists#'
+          path: lib/Xml/XmlWriter.php
