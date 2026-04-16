@@ -12,4 +12,5 @@ interface Folder extends Node {
 	public function nodeExists(string $path): bool;
 	public function newFolder(string $path): Folder;
 	public function newFile(string $path, mixed $content = null): File;
+	public function getDirectoryListing(): array;
 }

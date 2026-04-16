@@ -10,4 +10,9 @@ namespace OCP\Files;
 interface Node {
 	public function delete(): void;
 	public function fopen(string $mode): mixed;
+	public function getName(): string;
+	public function getPath(): string;
+	public function getMtime(): int;
+	public function getSize(bool $includeMounts = true): int|float;
+	public function copy(string $targetPath): Node;
 }
